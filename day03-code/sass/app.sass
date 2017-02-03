@@ -1,0 +1,42 @@
+.clearfix::after
+  content: ''
+  display: block
+  clear: both
+%reset-list
+  list-style: none
+  padding-left: 0
+
+  //gnb
+.gnb
+  width: 50vw
+  ul
+    @extend .clearfix
+    @extend %reset-list
+    list-style: none
+    padding-left: 0
+  li
+    float: left
+    margin-right: 1rem
+  a
+    text-decoration: none
+    display: block
+    padding: 0.6em 1.2em
+    background: #434343
+    color: #e3e3e3
+
+
+  //footer--navigation
+.footer--navigation
+  width: 50vw
+  ul
+    @extend .clearfix
+    @extend .reset-list
+  li
+    float: left
+    margin-right: 3px
+  a
+    text-decoration: none
+    display: block
+    padding: 0.6em 1.2em
+    background: #343434
+    color: #e3e3e3
