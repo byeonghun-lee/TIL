@@ -1,0 +1,29 @@
+%clearfix::after
+  content: ''
+  display: block
+  clear: both
+
+%reset-list
+  list-style: none
+  padding-left: 0
+
+%set-nav-link
+  display: block
+  vertical-align: top
+  text-decoration: none
+
+%set-nav
+  ul
+    @extend %reset-list
+    @extend %clearfix
+  a
+    @extend %set-nav-link
+
+%reset-link
+  text-decoration: none
+  display: inline-block
+%reset-button
+  border: none
+  padding: 0.34em
+  background: transparent
+  color: #343232
