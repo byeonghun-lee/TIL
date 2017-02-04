@@ -30,7 +30,7 @@ Sass 명령어 치는 것도 이제 지겹다, 명령어를 등록을 등록등�
 ```
 npm run sass
 ```  
-
+----
 
 sass코드 앞에 .clearfix 말고 %clearfix로 바꾸면 css로 바꿀때 감출수 있음
 (%플레이스홀더셀렉터-input과 비교해보기)
