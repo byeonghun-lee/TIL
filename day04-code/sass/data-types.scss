@@ -122,3 +122,70 @@ $page-width: 1280px;
   //Sass 변수를 문장 내에서 처리해주는 보간법(Interpolation) 방식
   font: #{$font-size}/#{$line-height} $font-family;
 }
+
+//Sass에 변수를 접합할 때 사용하는 인터폴레이션(보간법, #{})
+$namespace: 'FDS';
+$props: ('button', 'gallery', 'carousel', 'tab');
+
+.#{$namespace}-#{nth($props, 1)} {
+  content: '-#{nth($props, 1)}-';
+}
+.#{$namespace}-#{nth($props, 2)} {
+  content: '-#{nth($props, 2)}-';
+}
+.#{$namespace}-#{nth($props, 3)}{
+  content: '-#{nth($props, 3)}-';}
+.#{$namespace}-#{nth($props, 4)}{
+  content: '-#{nth($props, 4)}-';
+}
+
+//보간법 + 웹폰트
+$g-font: 'Open'; //'Open, Noto'
+@import url('https://fonts.googleapis.com/css?family=#{$g-font}+Sans');
+body {
+  font-family: "Noto Sans", sans-serif;
+}
+
+//box-sizing을 오늘날(모던) 스타일에 기본 값으로 처리하는 방법
+*,
+*::before,
+*::after{
+  box-sizing: inherit; //부모의 박스 사이징 설정을 상속
+}
+
+html{
+  box-sizing: border-box;
+}
+
+//HTML5 새롭게 추가된 요소
+
+$html5-new-elements: (
+  section,
+  article,
+  aside,
+  nav,
+  header,
+  footer,
+  figure,
+  figcaption
+);
+$need-reset-margin: (
+h1, h2, h3, h4, h5, h6,
+p, blogquote, ul, ol, dl
+);
+
+#{$html5-new-elements} {
+  display: block;
+  & #{need-reset-margin} {
+    margin-top: 0;
+  }
+}
+
+//@content 디렉티브 사용
+$query: max-width; //전역 변수
+@mixin mq($scope, $query: min-width){
+  @media screen and ($query: $scope){
+    @content;
+    content: $query;
+  }
+}
