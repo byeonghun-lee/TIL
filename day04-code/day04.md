@@ -64,6 +64,16 @@ Sass 변수를 문장 내에서 처리해주는 보간법(Interpolation) 방식
 
 # 전달인자  
 
+mixin에서 내부의 전달된 인자를 받는 것(예: $radius)을 전달 인자라고 함.  
+
+```css
+@mixin border-radius($radius){
+  border-radius: $radius;
+}
+#app{
+  @include border-radius(10px);
+}
+```
 ----------
 
 과제 : 유용한 mixin 5가지 만들어보기  
