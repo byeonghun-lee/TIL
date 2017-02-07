@@ -2,3 +2,19 @@
   @return mix($color, #fff, $amount)
 @function shade($color, $amount)
   @return mix($color, #000, $amount)
+
+$columns: 12 !default
+$page-width: 960px !default
+@function grid($column-width: 1)
+  @return $page-width * ($column-width/$columns)
+
+@function em($px, $base: 16)
+  @return $px/$base
+
+$root-font-size: 10px
+
+html
+  font-size: $root-font-size
+
+@function rem($px)
+  @return $px/$root-font-size
