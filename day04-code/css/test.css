@@ -1,0 +1,10 @@
+h1 {
+  width: 30px;
+  font-size: 16px;
+}
+
+.section-contents, .article-contents, .aside-contents, .nav-contents, .header-contents, .footer-contents, .figure-contents, .figcaption-contents {
+  margin-top: 10px;
+}
+
+/*# sourceMappingURL=data:application/json;base64,ewoJInZlcnNpb24iOiAzLAoJImZpbGUiOiAiY3NzL3Rlc3QuY3NzIiwKCSJzb3VyY2VzIjogWwoJCSJzYXNzL3Rlc3Quc2NzcyIKCV0sCgkibmFtZXMiOiBbXSwKCSJtYXBwaW5ncyI6ICJBQUtBLEFBQUEsRUFBRSxDQUFBO0VBSkEsS0FBSyxFQUtjLElBQUk7RUFKdkIsU0FBUyxFQUlnQixJQUFJO0NBQzlCOztBQWdCQyxBQUFBLGlCQUFVLEVBQVgsQUFBQyxpQkFBVSxFQUFaLEFBQUUsZUFBVSxFQUFiLEFBQUcsYUFBVSxFQUFkLEFBQUksZ0JBQVUsRUFBZixBQUFLLGdCQUFVLEVBQWhCLEFBQU0sZ0JBQVUsRUFBakIsQUFBTyxvQkFBVSxDQUFhO0VBQ3JCLFVBQVUsRUFBRSxJQUFJO0NBQ2pCIgp9 */

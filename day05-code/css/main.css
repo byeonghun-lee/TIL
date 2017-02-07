@@ -1,0 +1,48 @@
+@font-face {
+  font-family: "YouandiModernTR";
+  font-style: blod;
+  font-weight: oblique;
+  src: url("../fonts/Youandi_Modern_TextRegular.eot");
+  src: url("../fonts/Youandi_Modern_TextRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/Youandi_Modern_TextRegular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "YouandiModernTB";
+  font-style: blod;
+  font-weight: oblique;
+  src: url("../fonts/Youandi_Modern_TextBold.eot");
+  src: url("../fonts/Youandi_Modern_TextBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Youandi_Modern_TextBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "YouandiModernHEB";
+  font-style: blod;
+  font-weight: oblique;
+  src: url("../fonts/Youandi_Modern_HeadExtraBold.eot");
+  src: url("../fonts/Youandi_Modern_HeadExtraBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Youandi_Modern_HeadExtraBold.woff") format("woff");
+}
+
+.app {
+  font-family: 'YouandiModernTR';
+}
+
+.app-brand {
+  font-family: 'YouandiModernHEB';
+}
+
+.app-slogan {
+  font-family: 'YouandiModernTB';
+}
+
+.app .box {
+  width: 100px;
+  height: 100px;
+  background: #333;
+}
+
+.app .box--oblong {
+  width: 100px;
+  height: 60px;
+}
+
+/*# sourceMappingURL=data:application/json;base64,ewoJInZlcnNpb24iOiAzLAoJImZpbGUiOiAiY3NzL21haW4uY3NzIiwKCSJzb3VyY2VzIjogWwoJCSJzYXNzL21haW4uc2FzcyIsCgkJInNhc3MvX21peGlucy5zY3NzIgoJXSwKCSJuYW1lcyI6IFtdLAoJIm1hcHBpbmdzIjogIkFDQ0UsVUFBVTtFQUNOLFdBQVcsRURDb0MsaUJBQWlCO0VDQWhFLFVBQVUsRURBd0QsSUFBSTtFQ0N0RSxXQUFXLEVERDRELE9BQU87RUNFOUUsR0FBRyxFQUFFLDhDQUF3QjtFQUM3QixHQUFHLEVBQUUscURBQStCLENBQUMsMkJBQTJCLEVBQzNELCtDQUF5QixDQUFDLGNBQWM7OztBQU5qRCxVQUFVO0VBQ04sV0FBVyxFREVpQyxpQkFBaUI7RUNEN0QsVUFBVSxFRENxRCxJQUFJO0VDQW5FLFdBQVcsRURBeUQsT0FBTztFQ0MzRSxHQUFHLEVBQUUsMkNBQXdCO0VBQzdCLEdBQUcsRUFBRSxrREFBK0IsQ0FBQywyQkFBMkIsRUFDM0QsNENBQXlCLENBQUMsY0FBYzs7O0FBTmpELFVBQVU7RUFDTixXQUFXLEVER3NDLGtCQUFrQjtFQ0ZuRSxVQUFVLEVERTJELElBQUk7RUNEekUsV0FBVyxFREMrRCxPQUFPO0VDQWpGLEdBQUcsRUFBRSxnREFBd0I7RUFDN0IsR0FBRyxFQUFFLHVEQUErQixDQUFDLDJCQUEyQixFQUMzRCxpREFBeUIsQ0FBQyxjQUFjOzs7QURBbkQsQUFBQSxJQUFJLENBQUM7RUFDSCxXQUFXLEVBQUUsaUJBQWlCO0NBU087O0FBUnJDLEFBQUEsVUFBTyxDQUFDO0VBQ04sV0FBVyxFQUFFLGtCQUFrQjtDQUFJOztBQUNyQyxBQUFBLFdBQVEsQ0FBQztFQUNQLFdBQVcsRUFBRSxpQkFBaUI7Q0FBSTs7QUFMdEMsQUFNRSxJQU5FLENBTUYsSUFBSSxDQUFDO0VDREwsS0FBSyxFREVXLEtBQUs7RUNEckIsTUFBTSxFRENVLEtBQUs7RUFDbkIsVUFBVSxFQUFFLElBQUk7Q0FFaUI7O0FBVnJDLEFBTUUsSUFORSxDQVNBLFlBQVMsQ0FBQztFQ0paLEtBQUssRURLYSxLQUFLO0VDSnZCLE1BQU0sRURJbUIsSUFBSTtDQUFJIgp9 */

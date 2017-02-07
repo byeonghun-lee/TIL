@@ -1,0 +1,27 @@
+@mixin input-btn($width, $f-size) {
+  width: $width;
+  font-size: $f-size;
+}
+
+h1{
+  @include input-btn(30px, 16px);
+}
+
+$html5-new-elements: (
+  ".section",
+  ".article",
+  ".aside",
+  ".nav",
+  ".header",
+  ".footer",
+  ".figure",
+  ".figcaption"
+);
+$need-reset-margin: (
+  -contents
+);
+#{$html5-new-elements} {
+  &#{$need-reset-margin} {
+    margin-top: 10px;
+  }
+}

@@ -1,0 +1,18 @@
+@import 'mixins'
+
+//useing mixin 'font()'
++font('../fonts/Youandi_Modern_TextRegular', 'YouandiModernTR', blod oblique)
++font('../fonts/Youandi_Modern_TextBold', 'YouandiModernTB', blod oblique)
++font('../fonts/Youandi_Modern_HeadExtraBold', 'YouandiModernHEB', blod oblique)
+
+.app
+  font-family: 'YouandiModernTR'
+  &-brand
+    font-family: 'YouandiModernHEB'
+  &-slogan
+    font-family: 'YouandiModernTB'
+  .box
+    +size(100px)
+    background: #333
+    &--oblong
+      +size(100px, 60px)
