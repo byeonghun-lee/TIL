@@ -1,0 +1,40 @@
+@function px2em ($font_size, $base_font_size:16){
+  @return $font_size/$base_font_size + em;
+}
+
+body{
+  color:px2em(12,20);
+}
+
+@function text-contrast($bgcolor, $val:70%){
+  $value: null;
+  @if lightness($bgcolor)>50%{
+    $value: darken($bgcolor, $val);
+  }
+  @else{
+    $value: lighten($bgcolor, $val);
+  }
+  @return $value;
+}
+
+.hi{
+  color: text-contrast(red, 10%);
+}
+
+$name: foo;
+$attr: border;
+p.#{$name} {
+  #{$attr}-color: blue;
+}
+
+@each $obj in phone, tablet, cup, mouse{
+  .item-#{$obj}{
+    background-image: url("img/#{$obj}.jpg");
+  }
+}
+
+@each $item in (h1: 2em, h2: 1.5em, h3: 1.2em) {
+#{nth($item, 1)} {
+font-size: nth($item, 2);
+}
+}

@@ -1,0 +1,11 @@
+@media print {
+  body abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+  body a[href^="http://"]::after,
+  body a[href^="https://"]::after {
+    content: " (" attr(href) ")";
+  }
+}
+
+/*# sourceMappingURL=../map/print.css.map */

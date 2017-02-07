@@ -1,0 +1,51 @@
+.button-big, .button {
+  font-size: 22px;
+}
+
+.button {
+  padding: 0.88em 1.57em;
+  text-align: center;
+  letter-spacing: -0.034em;
+  font-size: 14px;
+  color: #323232;
+}
+
+.button.button-default {
+  color: #323232;
+  background: #fff;
+}
+
+.button:not(.button-default) {
+  color: #fff;
+}
+
+.button.button-primary {
+  background: #4b96d0;
+  color: #fff;
+}
+
+.button.button-success {
+  background: #67c067;
+  color: #fff;
+}
+
+.button.button-info {
+  background: #66c7e2;
+  color: #fff;
+}
+
+.button.button-warn {
+  background: #f2b658;
+  color: #fff;
+}
+
+.button.button-danger {
+  background: #de5e59;
+  color: #fff;
+}
+
+.button.button-round {
+  border-radius: 4px;
+}
+
+/*# sourceMappingURL=../map/ui-button.css.map */

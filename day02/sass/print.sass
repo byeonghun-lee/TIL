@@ -1,0 +1,8 @@
+@media print
+  body
+    abbr[title]::after
+      content: ' (' attr(title) ')'
+
+    a[href^="http://"]::after,
+    a[href^="https://"]::after
+      content: ' (' attr(href) ')'
