@@ -1,0 +1,12 @@
+$i:1;
+
+@while $i <= 24{
+  .icon#{$i}{
+    width: 264px;
+    height: 170px;
+    background: skyblue;
+    border: 1px solid green;
+    display: inline-block;
+  }
+  $i: $i + 1;
+}
