@@ -1,0 +1,13 @@
+@import "test"
+$i : 1
+.icon-
+  @while $i <= 20
+    &item#{$i}
+      height: 100px
+      width: 100px
+      display: inline-block
+      border: 1px solid #ccc
+      @each $index, $bg-color in $color-map
+        &:nth-child(#{$index})
+          background-color: $bg-color
+    $i: $i+1
