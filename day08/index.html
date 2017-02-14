@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Client side JavaScript</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <p id="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel nisi minus quis suscipit itaque officia officiis
+    excepturi maxime. Molestiae, dolorem aliquid minima, ratione quibusdam repellat nisi explicabo facere nesciunt quo iusto nostrum itaque deserunt libero dolor necessitatibus est. Eum, facere voluptatum perspiciatis, cum adipisci corrupti molestias hic error tenetur ratione.</p>
+    <button>fkfkfkfkfkfk</button>
+  <!-- <p id="paras">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam asperiores pariatur mollitia, optio! Quasi nobis, esse debitis excepturi atque ad!</p> -->
+  <script>
+    var para;
+    para = window.document.getElementById('para');
+    console.log('para:', para);
+    console.log('para.nodeType:', para.nodeType);
+    console.log('para는 요소노드인가?:', para.nodeType==document.ELEMENT_NODE);
+
+    var paras = window.document.getElementById('paras');
+    console.log('paras:', paras);
+
+    var paragraphs=document.getElementsByTagName('p');
+    console.log('paragraphs:', paragraphs);
+
+    var target_p, btn_control;
+    target_p = document.getElementById('para');
+    console.log('target_p:', target_p);
+    btn_control = document.getElementsByTagName('button');
+    console.log('btn_control:', btn_control);
+
+    console.log('btn_control 집합의 첫번째 원소:', btn_control.item(0));
+    btn_control.item(0).onclick = function() {
+      console.log('clicked button')
+      target_p.style.color = '#fe4940';
+    }
+  </script>
+</body>
+</html>
