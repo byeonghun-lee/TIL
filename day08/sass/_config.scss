@@ -1,0 +1,7 @@
+@mixin container($container-width){
+  .container{
+    width: $container-width;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+}

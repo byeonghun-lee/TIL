@@ -1,0 +1,26 @@
+@import "config";
+@include container(320px);
+html,body,div,header,nav,section,aside,article,footer,figure,figcaption,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,p,fieldset{
+  margin: 0;
+  padding: 0;
+ }
+header{
+  padding: 0 17px;
+ }
+header a{
+  background: url(../images/logo-header.png) no-repeat;
+  background-position: center;
+  width:286px;
+  height:51px;
+  text-indent: -9999px;
+  display: block;
+}
+.container{
+  background: lime;
+}
+h1{
+  display: inline-block;
+  width: 286px;
+  padding: 80px 0 58px 0;
+  border-bottom: 1px solid #6a8390;
+}
