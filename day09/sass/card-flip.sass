@@ -1,0 +1,48 @@
+%flex-center
+  display: flex
+  justify-content: center
+  align-items: center
+
+html
+  font-size: 10px
+figure
+  margin: 0
+body
+  margin: 0
+  @extend %flex-center
+  min-height: 100vh
+  font-size: 1.6rem
+  // perspective: 450px
+$card-color: #fdb0af
+%card-set
+  $card-color: #fdb0af
+  @extend %flex-center
+  width: 100%
+  height: 100%
+  border: 3px solid $card-color
+  border-radius: 4px
+  font-size: 10rem
+  user-select: none
+  // transform-origin: center center
+  transform-style: preserve-3d
+  position: absolute
+  backface-visibility: hidden
+
+.flip-card
+  position: relative
+  width: 240px
+  height: 360px
+  transform-style: preserve-3d
+  transform: perspective(450px) rotateY(0deg)
+
+.flip-card__front
+  @extend %card-set
+  color: $card-color
+  background: mix($card-color, #fff, 8%)
+  transform: perspective(450px) rotateY(0deg)
+
+.flip-card__back
+  @extend %card-set
+  background: $card-color
+  color: mix($card-color, #fff, 8%)
+  transform: perspective(450px) rotateY(180deg)
