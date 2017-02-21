@@ -1,0 +1,19 @@
+.photo-list{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  animation: move-photo;
+  animation-duration: 3s;
+}
+.photo-list img{
+  width: 100%;
+  height: 100%;
+}
+.photo-list img:hover{
+  animation: move-photo;
+  animation-duration: 3s;
+}
+@keyframes move-photo{
+  0%  {bottom: 0px;}
+  100%  {bottom: 200px; background: black;}
+}
