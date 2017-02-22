@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta charset="UTF-8">
+  <title>DOM API를 공부해봅시다.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/dom-api.css">
+  <script src="../../lib/helper.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header class="container-header">
+      <h1 class="site-brand" lang="en">Using DOM Script</h1>
+    </header>
+  </div>
+
+  <hr>
+
+<div class="component">
+
+</div>
+
+  <div class="demo-innerHTML"></div>
+
+<ul class="demo-matches">
+  <li>list-item 07</li>
+  <li>list-item 05</li>
+  <li>list-item 04</li>
+  <li>list-item 06</li>
+  <li>list-item 07</li>
+  <li>list-item 05</li>
+  <li>list-item 04</li>
+  <li>list-item 06</li>
+  <li>list-item 07</li>
+  <li>list-item 05</li>
+  <li>list-item 04</li>
+  <li>list-item 07</li>
+  <li>list-item 05</li>
+  <li>list-item 04</li>
+  <li>list-item 06</li>
+  <li class="demo-matches-target">list-item 06</li>
+  <li>list-item 07</li>
+  <li>list-item 05</li>
+  <li>list-item 04</li>
+  <li>list-item 06</li>
+  <li>list-item 07</li>
+  <li>list-item 05</li>
+  <li>list-item 04</li>
+  <li>list-item 06</li>
+  <li>list-item 07</li>
+  <li>list-item 05</li>
+  <li>list-item 04</li>
+  <li>list-item 06</li>
+  <li>list-item 07</li>
+  <li>list-item 05</li>
+  <li>list-item 04</li>
+  <li>list-item 06</li>
+</ul>
+
+<div class="demo-insertAdjacentHTML">
+  <h1>Insert Adjacent HTML</h1>
+  <p>Lorem ipsum dolor sit amet.</p>
+</div>
+
+<script src="../js/dom-api.js"></script>
+ <script>
+  var maked_el = makeEl('div', '<strong class="important">매우 매우 강조!</strong> 하하하!');
+  var created_el;
+
+  created_el = makeEl('article', 'Article Section', query('.demo-makeEl'), 'prepend');
+  console.log('maked_el:', maked_el);
+  created_el.setAttribute('class', 'article-section');
+  created_el.onmouseenter = function(){
+    this.style
+  }
+ </script>
+</body>
+</html>

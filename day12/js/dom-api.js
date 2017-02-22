@@ -39,13 +39,25 @@ var detectActivateState = function(child_node) {
     // console.log('B');
     cross_actived = query('.active', section_a);
   }
-  console.log('cross_actived:', cross_actived);
+  // console.log('cross_actived:', cross_actived);
+  return cross_actived;
 };
 
 var switchNode = function() {
+  var our_actived = this;
+  var cross_actived = detectActivateState(this.parentNode);
   // console.log('switchNode:', this);
-  detectActivateState(this.parentNode);
-  assignActiveClass(this);
+  if (cross_actived !== null ){
+    if ( our_actived.nextElementSibling !== null ){
+      before(cross_actived, our_actived.nextElementSibling);
+    }else{
+      append(our_actived.parentNode, cross_actived);
+    }
+    replace(our_actived, cross_actived);
+    // console.log(memory_actived);
+  } else{
+    assignActiveClass(this);
+  }
 }
 
 // 반복문을 사용하여 수집된 li 요소노드에 일괄적으로 이벤트를 연결

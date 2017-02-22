@@ -87,6 +87,12 @@ function replace(replace_node, replaced_node){
   return replaced_node;
 }
 function change(replace_node, replaced_node){
-  
+  var target = replace_node.nextElementSibling;
+  if (target !== null ){
+    before(replaced_node, target);
+  }else{
+    target = replace_node.parentNode;
+    append(target, replaced_node);
+  }
 }
 function clone(){}
