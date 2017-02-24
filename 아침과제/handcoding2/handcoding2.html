@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Handcoding2</title>
+  <style>
+  *,
+  *::after{
+    box-sizing: border-box;
+  }
+    h1{
+      font-weight: lighter;
+      text-align: center;
+      margin: 40px;
+      color: rgb(105, 45, 204);
+    }
+    section{
+      display: flex;
+      justify-content: center;
+    }
+      button{
+      padding: 20px 80px;
+      margin: 0 20px;
+      background: transparent;
+      border: 0;
+      color: rgb(105, 45, 204);
+      cursor: pointer;
+    }
+    .box-side, .box-line, .box-center{
+      position: relative;
+    }
+    .box-side{
+      border: 2px solid rgb(105, 45, 204);
+    }
+    .box-side::after, .box-line::after, .box-center::after{
+      content: '';
+      position: absolute;
+      transition: all 1s ease-in-out;
+    }
+    .box-side::after{
+      z-index: -1;
+      background: rgb(105, 45, 204);
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 100%;
+    }
+    .box-side:hover::after {
+      left: 0;
+      right: 0;
+    }
+    .box-side:hover{
+      color: white;
+      transition: all 1.5s ease-in-out;
+    }
+    .box-line::after, .box-center::after{
+      border-bottom: 2px solid rgb(105, 45, 204);
+      bottom: 0;
+      height: 2px;
+      left: 0;
+      right: 100%;
+    }
+    .box-line:hover::after{
+      left: 0;
+      right: 0;
+    }
+    .box-center::after{
+      left: 50%;
+      right: 50%;
+    }
+    .box-center:hover::after{
+      left: 0;
+      right: 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>손코딩3, 버튼을 만들어 보아요!</h1>
+  <section class="button-list">
+    <button type="button" class="box-side">옆으로 슉슉 채워지는 버튼</button>
+    <button type="button" class="box-line">선이 슉슉 생기는 버튼</button>
+    <button type="button" class="box-center">선이 갈라지는 버튼</button>
+  </section>
+  <!-- 버튼은 재사용을 위해 패딩을 사용. width랑 height를 주면 글씨가 많아지면 글이 내려감. -->
+</body>
+</html>
