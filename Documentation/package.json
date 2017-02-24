@@ -1,0 +1,15 @@
+{
+  "name": "generate-documentation",
+  "version": "0.0.1",
+  "description": "라이브러리 자동 문서화",
+  "private": true,
+  "scripts": {
+    "start": ""
+  },
+  "devDependencies": {
+    "jsdoc": "^3.4.3",
+    "minami": "^1.1.1",
+    "sassdoc": "^2.2.0",
+    "sassdoc-theme-neat": "0.0.2"
+  }
+}

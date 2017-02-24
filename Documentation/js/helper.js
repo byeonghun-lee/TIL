@@ -1,3 +1,4 @@
+/*! helper.js © yamoo9.net, 2017 */
 
 /**
  *  요소 노드를 생성하는 헬퍼 함수
@@ -15,6 +16,7 @@ function createElement(el_name) {
 function createText(content) {
   return document.createTextNode(content);
 }
+
 /**
  *  요소노드를 생성(콘텐츠[HTML 유형 가능] 포함)하거나, 특정 부모노드에 자식노드로 삽입하는 헬퍼 함수
  *  @param   {String}        el_name  생성할 노드 이름
@@ -40,6 +42,7 @@ function makeEl(el_name, html_str, context, method) {
   // 생성된 요소노드 반환
   return el;
 }
+
 /**
  *  querySelector 헬퍼 함수
  *  @param    {String}      selector_str  CSS 선택자
@@ -58,6 +61,7 @@ function query(selector_str, context) {
 function queryAll(selector_str, context) {
   return (context || document).querySelectorAll(selector_str);
 }
+
 /**
  *  부모 노드 내부에 마지막 자식노드로 요소를 추가하는 헬퍼 함수
  *  @param    {HTMLElement|Selector}  parent 부모노드 또는 선택자(문자열)
@@ -91,6 +95,7 @@ function prepend(parent, child) {
   // return child;
   return parent.insertAdjacentElement('afterbegin', child);
 }
+
 /**
  *  insertNode를 targetNode 앞에 삽입하는 헬퍼 함수 (형제로서 삽입)
  *  @param    {HTMLElement}  insert_node 삽입 요소 노드
@@ -159,6 +164,7 @@ function change(replace_node, replaced_node) {
     append(parent, replaced_node);
   }
 }
+
 /**
  *  노드를 가볍게 또는 깊게(자손, 인라인 스크립트 이벤트 까지) 복제하는 헬퍼 함수
  *  @param    {HTMLElement}  node   복사할 노드
@@ -170,70 +176,4 @@ function clone(node, deep) {
     deep = false;
   }
   return node.cloneNode(deep);
-}
-
-/**
- * 요소노드에 전달된 class 속성 이름 값이 일치하는 것이 있는지 유무 파악 헬퍼 함수
- * @param {HTMLElement} el_node    - class 속성 값을 포함하는지 확인하고자 하는 요소노드
- * @param {String}      class_name - 일치 유무를 파악하고자 하는 문자형 데이터
- * @returns {boolean}                일치 유무 파악 후 결과 반환
- */
-function hasClass(el_node, class_name) {
-  // el_node의 class 속성 값에 전달된 class_name 이 존재한다면? true 반환
-
-  // el_node 요소노드에서 class 속성 값을 가져온다.
-  var old_classes = el_node.getAttribute('class') || '';
-  //if ( typeof old_classes !== 'string' ) {
-  //  old_classes = '';
-  //}
-  // 가져온 속성 값을 .split()로 쪼개서 집합(배열)을 만든다.
-  old_classes = old_classes.split(' ');
-  // 반복문을 사용해서 class_name 값과 일치하는 원소(아이템)가 있는지 확인한다.
-  for ( var i=0; i<old_classes.length; i++ ) {
-    var class_item = old_classes[i];
-    if ( class_item === class_name ) {
-      // 만약 일치하는 원소가 있다면 true를 반환한다.
-      return true;
-    }
-  }
-  // 아니라면 false를 반환한다.
-  return false;
-}
-
-/**
- *  요소노드에 class 속성을 추가하는 헬퍼 함수
- *  @param  {HTMLElement}  el_node - class 속성을 추가할 HTML 요소노드
- *  @param  {String}  class_name   - 적용할 class 속성 값 이름
- */
-function addClass(el_node, class_name) {
-  // 전달인자 검증(Arguments Validation)
-  if ( el_node.nodeType !== 1 ) {
-    // 문제가 발생하면, 오류 발생
-    throw new Error('첫번째 전달 인자의 유형은 요소노드여야 합니다.');
-  }
-  if ( typeof class_name !== 'string' ) {
-    throw new Error('두번째 전달 인자의 유형은 문자형 이어야 합니다.');
-  }
-  // HTML DOM 방식
-  // Core DOM 방식
-  if ( !hasClass(el_node, class_name) ) {
-    el_node.className += ' ' + class_name;
-    //el_node.setAttribute('class', class_name);
-  }
-}
-
-function removeClass(el_node, class_name){
-  if(!class_name){
-    el_node.removeAttribute('class', '');
-  }
-  if (hasClass(el_node, class_name)){
-    var old_classes = el_node.getAttribute('class').split(' ');
-    for(var i=0; i<old_classes.length; i++){
-      var class_item = old_classes[i];
-      if(class_item===class_name){
-        old_classes.splice(i,1);
-      }
-    }
-    el_node.setAttribute('class',old_classes.join(' '));
-  }
 }
