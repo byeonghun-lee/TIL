@@ -1,0 +1,21 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+}
+
+@media screen and (max-width: 767px) {
+ .container{
+   width: 100%;
+ }
+ .md-1-4{ width: 25%; }
+ .md-2-4{ width: 50%; }
+ .md-3-4{ width: 75%; }
+ .md-4-4{ width: 100%; }
+
+}
+@media screen and (min-width: 768px) and (max-width: 959px) {
+
+}
+@media screen and (min-width: 960px) {
+
+}
